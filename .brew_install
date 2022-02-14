@@ -56,6 +56,7 @@ brew install --cask microsoft-teams
 brew install --cask sublime-text
 brew install --cask telegram
 brew install --cask the-unarchiver
+brew install --cask zoom
 
 # ==============================================
 # done
