@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 XCODE=`xcode-select --version`
+ROSETTA=`pkgutil --files com.apple.pkg.RosettaUpdateAuto`
 HOMEBREW=`brew --version`
 
 if [[ "$XCODE" != "" ]]; then
@@ -9,6 +10,14 @@ if [[ "$XCODE" != "" ]]; then
 else
     echo  "No Xcode installation. Installing Xcode ..."
     xcode-select --install
+fi
+
+if [[ "$ROSETTA" != "" ]]; then
+    echo $ROSETTA
+    echo "Rosetta installed. We are good to go!"
+else
+    echo  "No Rosetta installation. Installing Rosetta ..."
+    /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 fi
 
 if [[ "$HOMEBREW" != "" ]]; then
