@@ -307,11 +307,6 @@ echo "User Preferences: Menu Bar preferences"
 # Menu Bar Date Format
 defaults write com.apple.menuextra.clock "DateFormat" "EEE d MMM  HH:mm:ss"
 
-# Menu Bar Battery Percentage
-if [[ "$IS_LAPTOP" != "" ]]; then
-    defaults write com.apple.menuextra.battery "ShowPercent" -string "YES"
-fi
-
 # ==============================================
 # User Preferences: App: Finder
 # ==============================================
